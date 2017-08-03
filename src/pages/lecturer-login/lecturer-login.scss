@@ -1,7 +1,7 @@
 page-login {
  
   .login-content {
-    background: #56CA96;
+    background:lightskyblue;
  
     .logo-row {
       padding-top: 50px;
@@ -9,7 +9,7 @@ page-login {
     }
  
     .login-box {
-      background: #399F8B;
+      background: #99b3ff;
       padding: 20px 20px 0px 20px;
       margin-top: 30px;
     }
@@ -24,7 +24,7 @@ page-login {
          padding-left: 30px !important;
          font-size: 0.9em;
          margin-bottom: 10px;
-         border: 1px solid #ffffff;
+         border: 1px solid #99b3ff;
          border-bottom: 0px !important;
          box-shadow: none !important;
      }
@@ -35,20 +35,24 @@ page-login {
      }
  
      .item-inner {
-       border-bottom-color: #ffffff !important;
+       border-bottom-color: #99b3ff !important;
        box-shadow: none !important;
      }
  
      .submit-btn {
-       background: #51CFB1;
+       background: blueviolet;
        border-radius: 30px !important;
-       border: 1px solid #ffffff;
+       border: 1px solid #99b3ff;
      }
  
      .register-btn {
-       color: #ffffff;
+       color: blueviolet;
        font-size: 0.8em;
      }
+         .button_Color {
+         background-color: blueviolet;
+  }
+
   }
  
 }

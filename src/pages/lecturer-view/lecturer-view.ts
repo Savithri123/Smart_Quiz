@@ -7,7 +7,7 @@ import { AuthServiceProvider } from "../../providers/auth-service/auth-service";
 @IonicPage()
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'lecturer-view.html'
 })
 export class LecturerViewPage {
   username = '';
@@ -20,7 +20,7 @@ export class LecturerViewPage {
  
   public logout() {
     this.auth.logout().subscribe(succ => {
-      this.nav.setRoot('LecturerLoginPage')
+      this.nav.setRoot('CreateQuestionsPage')
     });
   }
 }

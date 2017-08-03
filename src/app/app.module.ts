@@ -8,7 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {LecturerLoginPage} from '../pages/lecturer-login/lecturer-login';
 import {AuthServiceProvider } from '../providers/auth-service/auth-service';
-
+import { LecturerRegPage } from '../pages/lecturer-reg/lecturer-reg';
 import { LecturerViewPage } from '../pages/lecturer-view/lecturer-view';
 
 
@@ -23,6 +23,8 @@ import { LecturerViewPage } from '../pages/lecturer-view/lecturer-view';
     HomePage,
     LecturerLoginPage,
    
+    
+   
   ],
   imports: [
     BrowserModule,
@@ -33,6 +35,7 @@ import { LecturerViewPage } from '../pages/lecturer-view/lecturer-view';
     MyApp,
     HomePage ,
     LecturerLoginPage,
+  
   
   ],
   providers: [
