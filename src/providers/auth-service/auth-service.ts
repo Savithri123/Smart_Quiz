@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from "rxjs/Observable";
+import { Storage } from '@ionic/storage';
+    
+
 
 export class User {
   name: string;
@@ -11,13 +14,16 @@ export class User {
     this.email = email;
   }
 }
+
 @Injectable()
 export class AuthServiceProvider {
 
   currentUser: User;
 
-  
- 
+  constructor(private storage: Storage) {
+    this.storage = storage;
+  }
+
   public login(credentials) {
     if (credentials.email === null || credentials.password === null) {
       return Observable.throw("Please insert credentials");
@@ -25,7 +31,10 @@ export class AuthServiceProvider {
       return Observable.create(observer => {
         // At this point make a request to your backend to make a real check!
         let access = (credentials.password === "pass" && credentials.email === "email");
+
         this.currentUser = new User('Savithri', 'savithri@nsbm.lk');
+        this.storage.set("currentUser", JSON.stringify(this.currentUser));
+
         observer.next(access);
         observer.complete();
       });
@@ -44,7 +53,25 @@ export class AuthServiceProvider {
     }
   }
  
-  public getUserInfo() : User {
+  public getUserInfo() {
+    return this.storage.get('currentUser');
+  }
+
+  public getUserInfoo(callback) {
+    let user;
+    this.storage.get('currentUser').then((data) => {
+      user = data;
+      console.log("data",data);
+      callback(null, user);
+    });
+    console.log("user=============",user);
+  }
+
+  public getUserrInfo() : User {
+    this.storage.get('currentUser').then((data) => {
+      if (data != null) this.currentUser = JSON.parse(data);
+      else this.currentUser = null;
+    });
     return this.currentUser;
   }
  
