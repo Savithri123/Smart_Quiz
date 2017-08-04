@@ -2,6 +2,7 @@
 import { Component } from '@angular/core';
 import { NavController, IonicPage } from 'ionic-angular';
 import { AuthServiceProvider } from "../../providers/auth-service/auth-service";
+import { CreateQuestionsPage } from "../create-questions/create-questions";
 
 
 @IonicPage()
@@ -16,6 +17,8 @@ export class LecturerViewPage {
     let info = this.auth.getUserInfo();
     this.username = info['name'];
     this.email = info['email'];
+
+   
   }
  
   public logout() {
@@ -23,4 +26,11 @@ export class LecturerViewPage {
       this.nav.setRoot('CreateQuestionsPage')
     });
   }
+
+    nextPage(){
+
+
+      this.nav.push(CreateQuestionsPage);
+    }
+
 }

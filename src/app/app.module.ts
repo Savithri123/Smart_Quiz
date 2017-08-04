@@ -10,6 +10,7 @@ import {LecturerLoginPage} from '../pages/lecturer-login/lecturer-login';
 import {AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { LecturerRegPage } from '../pages/lecturer-reg/lecturer-reg';
 import { LecturerViewPage } from '../pages/lecturer-view/lecturer-view';
+import { CreateQuestionsPage } from '../pages/create-questions/create-questions';
 
 
 
@@ -22,7 +23,7 @@ import { LecturerViewPage } from '../pages/lecturer-view/lecturer-view';
     MyApp,
     HomePage,
     LecturerLoginPage,
-   
+   CreateQuestionsPage
     
    
   ],
@@ -35,6 +36,7 @@ import { LecturerViewPage } from '../pages/lecturer-view/lecturer-view';
     MyApp,
     HomePage ,
     LecturerLoginPage,
+    CreateQuestionsPage
   
   
   ],
